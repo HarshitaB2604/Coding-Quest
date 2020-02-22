@@ -1,0 +1,70 @@
+#**************************FUNCTION***********************
+def speeding(speedAr, birthday):
+  #contranits for speed
+  no = 60
+  small = 61
+  big = 81
+
+  #add 5 to all contraints if it is thier birthday
+  if(birthday == "true"):
+    no += 5 
+    small += 5
+    big += 5
+
+  for ticket in range(len(speedAr)):
+    #checks if the person gets no ticket
+    if(speedAr[i] <= no):
+      print("no ticket")
+    
+    #checks if the person gets a small ticket
+    elif(speedAr[i] >= small and speedAr[i] < big):
+      print("small ticket")
+
+    #checks if the person gits a big ticket
+    else:
+      print("big ticket")
+
+def removeChar(a):
+  #removes the end line escape character
+  for i in range(len(a)):
+    a[i] = a[i].replace("\n", "")
+
+def removeSpace(ar):
+  #removes any spaces
+  for i in range(len(ar)):
+    ar[i] = ar[i].replace(" ", "")
+
+def strToInt(array):
+  #convert the numbers stored as strings to inergers
+  for i in range(len(array)):
+    array[i] = int(array[i])
+
+
+#*************************MAIN***********************
+#convert file into array
+inFile = open("Prob04.txt", "r")
+line = inFile.readline()
+
+prob4 = []
+while(line):
+  prob4.append(line)
+  line = inFile.readline()
+inFile.close()
+
+#code to process the array
+
+#remove enline char and spaces in each element
+removeChar(prob4)
+removeSpace(prob4)
+
+#spilit into two arrays
+speed = []
+birthday = []
+for x in range(len(prob4)):
+  speed.append(prob4[x][0] + prob4[x][0])
+  
+  bday = ""
+  for b in range(2, len(prob4[x])):
+    birthday.append
+
+strToInt(speed)
