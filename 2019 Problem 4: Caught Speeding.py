@@ -1,23 +1,25 @@
 #**************************FUNCTION***********************
 def speeding(speedAr, birthday):
-  #contranits for speed
-  no = 60
-  small = 61
-  big = 81
+  for t in range(len(speedAr)):
+    #contranits for speed
+    no = 60
+    small = 61
+    big = 81
 
-  #add 5 to all contraints if it is thier birthday
-  if(birthday == "true"):
-    no += 5 
-    small += 5
-    big += 5
+    #add 5 to all contraints if it is thier birthday
+    if(birthday == True):
+      no += 5  
+      small += 5
+      big += 5
+      print("added")
 
-  for ticket in range(len(speedAr)):
+      
     #checks if the person gets no ticket
-    if(speedAr[i] <= no):
+    if(speedAr[t] <= no):
       print("no ticket")
     
     #checks if the person gets a small ticket
-    elif(speedAr[i] >= small and speedAr[i] < big):
+    elif(speedAr[t] >= small and speedAr[t] < big):
       print("small ticket")
 
     #checks if the person gits a big ticket
@@ -61,10 +63,14 @@ removeSpace(prob4)
 speed = []
 birthday = []
 for x in range(len(prob4)):
-  speed.append(prob4[x][0] + prob4[x][0])
+  speed.append(prob4[x][0] + prob4[x][1])
   
-  bday = ""
-  for b in range(2, len(prob4[x])):
-    birthday.append
+  #adding to the birthday array
+  if(prob4[x][2] == "t"):
+    birthday.append(True)
+  else:
+    birthday.append(False)
 
 strToInt(speed)
+
+speeding(speed, birthday)
