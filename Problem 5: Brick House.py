@@ -6,9 +6,11 @@ def divide(mainArray):
 
   for i in range(len(mainArray)):
     #find the two breaking points
-    longBrickApen = mainArray[i].find("n")
-    wallLenApen = mainArray[i].find("n", longBrickApen + 1, len(mainArray))
+    longBrickBreak = mainArray[i].find("n")
+    wallLenBreak = mainArray[i].find("n", longBrickApen + 1, len(mainArray))
     
+    #add to the three parallel arrays
+    for i in range()
     shortBrick.append(mainArray[i][0])    
     longBrick.append(mainArray[longBrickApen + 1])    
     wallLenght.append(mainArray[wallLenApen + 1])
