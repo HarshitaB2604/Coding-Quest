@@ -18,13 +18,11 @@ def strToInt(ar):
     ar[i] = float(ar[i])
 
 #******************************MAIN***************************
-inFile = open("Prob07.txt", "r")
+inFile = open("C:\\Users\\mukta\\OneDrive\\Desktop\\honey\\hackathon\\VSC\\Prob07file.txt", "r")
 
 #read how many cases there are and convert the strng into an int
 case = inFile.readline()
 case = case.replace("\n", "")
-print(case)
-'''
 case = int(case)
 
 #reading the file and adding to the list
@@ -47,11 +45,10 @@ for c in range(case):
   #convert the numbers
   minNum = min(nums)
   maxNum = max(nums)
-  print("Before Loop: " + str(linesInTest))
   for x in range(0, linesInTest):
-    print(linesInTest)
+    print("Lines in test: " + str(linesInTest))
     print("X: " + str(x))
     print(nums[x])
     #convert(nums[i], minNum, maxNum)
-'''  
+  
 inFile.close()
