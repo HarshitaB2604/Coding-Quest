@@ -27,7 +27,7 @@ for c in range(case):
   code = inFile.readline()
   code = code.replace("\n", "")
 
-  
+  decryptCode = ""
   for i in range(len(code)):
     #only if the character in that position is not a space change it to its ascii number and remove the shift
     if(code[i] != " "):
@@ -35,7 +35,31 @@ for c in range(case):
     else:
       decrypt = " "
     
+    if(decrypt != " "):
+      if(decrypt > 122):
+        temp = decrypt - 122
+        #reset to a
+        decrypt = 97
+        decrypt += temp - 1
+        #convert back to a letter
+        decrypt = chr(decrypt)
+
+      elif(decrypt < 97):
+        temp = decrypt - 97
+        #reset to z
+        decrypt = 122
+        decrypt += temp + 1
+        #convert back to a letter
+        decrypt = chr(decrypt)
+      else:
+        decrypt = chr(decrypt)
+        
+    
+    #final code decrypted
+    
     decryptCode = decryptCode + decrypt
   
+  print(decryptCode)
+    
 
 inFile.close()
